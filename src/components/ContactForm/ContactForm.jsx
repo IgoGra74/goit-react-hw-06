@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { nanoid } from "nanoid";
 import css from "./ContactForm.module.css";
 
-const ContactForm = ({ addContact }) => {
+const ContactForm = ({ onAddContact }) => {
   const initialValues = {
     name: "",
     number: "",
@@ -28,7 +28,7 @@ const ContactForm = ({ addContact }) => {
       name: values.name,
       number: values.number,
     };
-    addContact(newContact);
+    onAddContact(newContact);
     actions.resetForm();
   };
 

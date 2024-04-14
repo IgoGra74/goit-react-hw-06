@@ -9,6 +9,7 @@ const SearchBox = () => {
   const onFilterChange = (event) => {
     dispatch(changeFilter(event.target.value));
   };
+  const onChange = (event) => onFilterChange(event);
 
   return (
     <div className={css.search}>
@@ -17,7 +18,7 @@ const SearchBox = () => {
         className={css.input}
         type="text"
         value={name}
-        onChange={(event) => onFilterChange(event)}
+        onChange={onChange}
       />
     </div>
   );
